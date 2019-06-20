@@ -37,7 +37,7 @@ X_train, X_test = X_train/255.0, X_test/255.0
 X_train, X_valid, y_train, y_valid = train_test_split(X_train, y_train, test_size=5000, random_state=25)
 
 # softmax回归
-model = tf.keras.Sequential([tf.keras.layers.Reshape([784], input_shape=(28,28)),
+model = tf.keras.Sequential([tf.keras.layers.Flatten(input_shape=(28,28)),
                              tf.keras.layers.Dense(10, activation=tf.nn.softmax)])
 
 # 定义优化器和损失函数
