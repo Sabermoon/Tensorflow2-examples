@@ -45,7 +45,6 @@ model = tf.keras.Sequential([tf.keras.layers.Conv2D(filters=32, kernel_size=(5,5
                              tf.keras.layers.Dropout(0.5),
                              tf.keras.layers.Dense(10, activation=tf.nn.softmax)])
 
-print(model.summary())
 # 定义优化器和损失函数
 model.compile(optimizer=tf.keras.optimizers.Adam(1e-4), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
