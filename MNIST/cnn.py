@@ -1,5 +1,7 @@
 """
 本样例使用双层卷积网络进行分类，其余部分与softmax大致相同
+
+网络设计部分依照 21个深度学习项目的内容
 """
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -54,3 +56,4 @@ model.fit(X_train, y_train, epochs=5)
 # 验证集验证，evaluate返回模型的损失值和度量值
 print('valid acc:\t', model.evaluate(X_valid, y_valid)[1])
 print('test acc:\t', model.evaluate(X_test, y_test)[1])
+# test acc:	0.99
