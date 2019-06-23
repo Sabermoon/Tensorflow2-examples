@@ -33,7 +33,7 @@ for i in range(0, 10):
         temp = tf.image.random_crop(x_train[i*batch: (i+1)*batch], size=[batch, 24, 24, 3])
         temp = tf.image.random_flip_left_right(temp)
         temp = tf.image.random_brightness(temp, max_delta=0.25)
-        temp = tf.image.random_contrast(temp, lower=0.2, upper=0.8)
+        temp = tf.image.random_contrast(temp, lower=0.2, upper=1.2)
         distorted_train = tf.concat([distorted_train, temp], axis=0)
 
 # for i in range(distorted_train[10:50].shape[0]):
