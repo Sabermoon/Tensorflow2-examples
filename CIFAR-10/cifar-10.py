@@ -58,6 +58,6 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=
 distorted_train = tf.cast(distorted_train, tf.float32) / 255.
 
 # 训练模型，注意可用内存大小
-# 由于模型变换较大，网络难以训练，需要大量训练，推荐轮次设25以上，准确率才比较高
+# 由于数据变化较大，网络难以训练，需要大量训练，推荐轮次设25以上，准确率才比较高
 model.fit(distorted_train, y_train, epochs=25, verbose=2)
 print(model.evaluate(distorted_train, y_train)[1])

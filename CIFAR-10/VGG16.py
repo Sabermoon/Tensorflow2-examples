@@ -10,6 +10,7 @@ vgg16 = VGG16(include_top=False, input_shape=(32,32,3))
 
 (x_train, y_train), (x_test, y_test) = load_data()
 
+# 定义 model
 c_train = vgg16.predict(x_train)
 c_test = vgg16.predict(x_test)
 
